@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    let who = ['The dog','My grandma','His turtle','My bird'];
+    let action = ['ate','peed','crushed','broke'];
+    let what = ['my homework', 'the keys', 'the car'];
+    let when = ['before the class','right on time','when I finished','during my lunch','while I was praying'];
+
+    function onLoad(who, action, what, when) {
+    let randomIndex = Math.floor(Math.random() * who.length);
+    let randomIndex2 = Math.floor(Math.random() * action.length);
+    let randomIndex3 = Math.floor(Math.random() * what.length);
+    let randomIndex4 = Math.floor(Math.random() * when.length);
+
+    return who[randomIndex] + " " + action[randomIndex2] + " " + what[randomIndex3] + " " + when[randomIndex4]
+}
+</script>
+
+<style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  
+    .centered-text {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+
+</head>
+<body>
+        <center>
+            <b>
+                <p style="font-size: 30px">OMG! you will not believe me but...</p>
+                <p style="font-size: 30px" id="excuse">My dog ate my homework</p>
+            </b>
+        </center>
+    <script>
+        document.getElementById("excuse").innerHTML = onLoad(who, action, what, when);
+    </script>
+</body>
+
+
+</html>
+
